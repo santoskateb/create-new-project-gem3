@@ -1,14 +1,24 @@
+<br><br>
 <h1>Post List</h1>
 <style>
+    h1, p {
+        text-align: center;
+        margin: auto;
+    }
+    table {
+        margin-left: auto;
+        margin-right: auto;
+    }
   #postlist {
         font-family: Arial, Helvetica, sans-serif;
         border-collapse: collapse;
-        width: 50%;
+        width: 55%;
     }
 
   #postlist td, #postlist th {
         border: 1px solid #ddd;
         padding: 8px;
+        text-align: center;
     }
 
   #postlist tr:nth-child(even){background-color: #f2f2f2;}
@@ -23,6 +33,7 @@
         color: white;
     }
 </style>
+
 <table id="postlist">
   <thead>
     <td>Title</td>
@@ -42,5 +53,6 @@
   <% end %>
 </table>
 
-
+<p>
 <%= link_to 'New', new_post_path %>
+</p>
