@@ -1,10 +1,33 @@
 <h1>Post List</h1>
+<style>
+  #postlist {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 50%;
+    }
 
-<table>
+  #postlist td, #postlist th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+  #postlist tr:nth-child(even){background-color: #f2f2f2;}
+
+  #postlist tr:hover {background-color: #ddd;}
+
+  #postlist thead {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #326fa8;
+        color: white;
+    }
+</style>
+<table id="postlist">
   <thead>
-    <td>title</td>
-    <td>content</td>
-    <td>action</td>
+    <td>Title</td>
+    <td>Content</td>
+    <td>Action</td>
   </thead>
   <% @posts.each do |post| %>
     <tr>
@@ -18,5 +41,6 @@
     </tr>
   <% end %>
 </table>
+
 
 <%= link_to 'New', new_post_path %>
