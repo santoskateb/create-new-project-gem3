@@ -14,5 +14,8 @@
     <%= form.label :content %>
     <%= form.text_field :content, class: 'form-control' %>
   </div>
+  <div>
+    <%= form.collection_check_boxes :category_ids, Category.all, :id, :name %>
+  </div>
   <%= form.submit :submit, class: 'btn btn-danger' %>
 <% end %>
