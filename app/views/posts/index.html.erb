@@ -45,14 +45,14 @@
       <td><%= post.title %></td>
       <td><%= post.content %></td>
       <td>
-        <%= link_to 'Show', post_path(post) %>
-        <%= link_to 'Edit', edit_post_path(post) %>
-        <%= button_to 'Delete', post_path(post), method: :delete %>
+        <%= link_to 'Show', post_path(post), class: 'btn btn-success'%>
+        <%= link_to 'Edit', edit_post_path(post), class: 'btn  btn-info'%>
+        <%= button_to 'Delete', post_path(post), method: :delete, class: 'btn btn-danger'%>
       </td>
     </tr>
   <% end %>
 </table>
 
 <p>
-<%= link_to 'New', new_post_path %>
+<%= link_to 'New', new_post_path, class: 'btn btn-primary' %>
 </p>
