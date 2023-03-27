@@ -47,6 +47,7 @@
     <tr>
       <td><%= post.title %></td>
       <td><%= post.content %></td>
+      <td><%= post.categories.pluck(:name).join(',') %></td>
       <td>
         <%= link_to 'Show', post_path(post), class: 'btn btn-success'%>
         <%= link_to 'Edit', edit_post_path(post), class: 'btn  btn-info'%>
